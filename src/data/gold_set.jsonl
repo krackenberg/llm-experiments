@@ -1,0 +1,3 @@
+{"id": "case_001", "input_data": "SPEC_IMG_REF:s3://bucket/passgrp_001.png\nMETA:{\"region\":\"Ukraine\",\"expected_signal\":\"GPS jamming\"}", "expected_status": "FAIL"}
+{"id": "case_002", "input_data": "SPEC_IMG_REF:s3://bucket/passgrp_002.png\nMETA:{\"region\":\"North Atlantic\",\"expected_signal\":\"none\"}", "expected_status": "OK"}
+{"id": "case_003", "input_data": "SPEC_IMG_REF:s3://bucket/passgrp_003.png\nMETA:{\"region\":\"South China Sea\",\"expected_signal\":\"coastal radar\"}", "expected_status": "SUSPECT"}

@@ -1,0 +1,13 @@
+default_model: claude-3.7-sonic
+models:
+  claude-3.7-sonic:
+    provider: bedrock
+    model_id: anthropic.claude-3-7-sonic-2025-01-01
+    region: us-gov-west-1
+  claude-3.5-small:
+    provider: bedrock
+    model_id: anthropic.claude-3-5-sonnet-2024-10-15
+    region: us-gov-west-1
+  openai-20b-local:
+    provider: local
+    endpoint: http://localhost:8000/v1/chat/completions

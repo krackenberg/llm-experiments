@@ -1,0 +1,8 @@
+production:
+  analysis_model: claude-3.7-sonic
+  judge_model: claude-3.5-small
+  updated_at: "2026-02-08T00:00:00Z"
+
+staging:
+  analysis_model: claude-3.7-sonic
+  judge_model: claude-3.5-small

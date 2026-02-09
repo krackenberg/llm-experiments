@@ -1,0 +1,50 @@
+name: LLM Eval CI
+
+on:
+  push:
+    paths:
+      - "src/prompts/**"
+      - "src/config/**"
+      - "src/eval/**"
+      - "src/data/**"
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install ".[dev]"
+
+      - name: Run unit tests
+        run: pytest tests/ -v
+
+  canary:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install .
+
+      - name: Run canary eval
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: us-gov-west-1
+        run: python -m src.eval.eval_runner --model claude-3.7-sonic --prompt prompt_v001.txt

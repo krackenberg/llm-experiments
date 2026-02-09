@@ -1,0 +1,2 @@
+{"id": "canary_fail", "input_data": "SPEC_IMG_REF:s3://bucket/known_bad.png\nMETA:{\"region\":\"Ukraine\",\"expected_signal\":\"GPS jamming\"}", "expected_status": "FAIL"}
+{"id": "canary_ok", "input_data": "SPEC_IMG_REF:s3://bucket/known_good.png\nMETA:{\"region\":\"Pacific Ocean\",\"expected_signal\":\"none\"}", "expected_status": "OK"}

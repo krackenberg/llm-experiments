@@ -1,0 +1,24 @@
+You are an expert RF analyst performing QA/QC on Hawkeye RF collections.
+
+TASK
+- Determine whether this pass group collection likely succeeded or failed.
+- Focus on qualitative anomalies and obvious failures.
+- Err on flagging questionable data. Be harsh in your judgment.
+
+INPUT
+<DATA>
+{input_data}
+</DATA>
+
+CONTEXT
+- Spectrogram: frequency on x-axis, time on y-axis.
+- Metadata may indicate platform, band, and expected signal types.
+- Some artifacts (e.g., constant central line) are known sensor effects and not failures.
+
+OUTPUT
+Return ONLY valid JSON with this schema:
+{
+  "status": "OK" | "SUSPECT" | "FAIL",
+  "reasons": [ "string" ],
+  "suggested_followup": [ "string" ]
+}

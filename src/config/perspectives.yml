@@ -1,0 +1,19 @@
+# Multiple analyst perspectives for the same data
+# Used in Section 7: Multiple Perspectives for Analysis Tasks
+
+perspectives:
+  - id: maritime_analyst
+    role: "You are a maritime analyst for UAE monitoring shipping patterns."
+    focus: "Identify anomalous vessel behavior and potential sanctions evasion."
+
+  - id: sanctions_officer
+    role: "You are a sanctions enforcement officer."
+    focus: "Flag any indicators of sanctions violations or illicit trade."
+
+  - id: red_team
+    role: "You are a red-team analyst looking for deception."
+    focus: "Identify potential spoofing, AIS manipulation, or deliberate obfuscation."
+
+synthesis:
+  prompt_file: prompts/synthesis_prompt.txt
+  model: claude-3.7-sonic

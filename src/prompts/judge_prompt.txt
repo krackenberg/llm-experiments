@@ -1,0 +1,22 @@
+You are an expert reviewer.
+
+TASK
+Evaluate the quality of the RF QA/QC explanation.
+
+INPUT
+<CASE>
+{case_input}
+</CASE>
+
+<MODEL_OUTPUT>
+{model_output}
+</MODEL_OUTPUT>
+
+OUTPUT
+Return ONLY JSON:
+
+{
+  "specificity": 1-5 integer,
+  "technical_correctness": 1-5 integer,
+  "no_hallucination": 1-5 integer
+}

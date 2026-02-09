@@ -1,0 +1,10 @@
+task_name: rf_qaqc_pass_group
+steps:
+  - id: summarize
+    prompt_file: prompts/prompt_v001.txt
+    output_key: summary
+  - id: classify_quality
+    prompt_file: prompts/prompt_v001.txt
+    input_keys:
+      - summary
+    output_key: quality_assessment
