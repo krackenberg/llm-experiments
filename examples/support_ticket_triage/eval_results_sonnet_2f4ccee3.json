@@ -1,0 +1,513 @@
+{
+  "run_id": "2f4ccee3",
+  "summary": {
+    "model": "sonnet",
+    "prompt_version": "triage_v001.txt",
+    "timestamp": "2026-02-09T13:55:47.657376+00:00",
+    "total_cases": 20,
+    "json_valid_rate": 1.0,
+    "schema_valid_rate": 1.0,
+    "category_accuracy": 0.65,
+    "priority_accuracy": 0.45,
+    "team_accuracy": 0.65,
+    "all_correct_rate": 0.45,
+    "avg_latency_sec": 0.0009016275405883789,
+    "judge_avg_specificity": 4.0,
+    "judge_avg_correctness": 4.0,
+    "judge_avg_completeness": 4.0,
+    "using_mock": true
+  },
+  "case_results": [
+    {
+      "case_id": "t001",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": true,
+      "priority_correct": true,
+      "team_correct": true,
+      "parsed_output": {
+        "category": "account_access",
+        "priority": "P1_critical",
+        "suggested_team": "security",
+        "reasoning": "Enterprise customer with team-wide login failure after password reset indicates a critical authentication issue requiring immediate security team investigation."
+      },
+      "raw_output": "{\"category\": \"account_access\", \"priority\": \"P1_critical\", \"suggested_team\": \"security\", \"reasoning\": \"Enterprise customer with team-wide login failure after password reset indicates a critical authentication issue requiring immediate security team investigation.\"}",
+      "error": null,
+      "latency_sec": 0.0013549327850341797,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t002",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": true,
+      "priority_correct": true,
+      "team_correct": true,
+      "parsed_output": {
+        "category": "bug",
+        "priority": "P2_high",
+        "suggested_team": "engineering",
+        "reasoning": "Dashboard rendering failure blocking daily standups for a pro-tier customer. Functional degradation requiring prompt engineering attention."
+      },
+      "raw_output": "{\"category\": \"bug\", \"priority\": \"P2_high\", \"suggested_team\": \"engineering\", \"reasoning\": \"Dashboard rendering failure blocking daily standups for a pro-tier customer. Functional degradation requiring prompt engineering attention.\"}",
+      "error": null,
+      "latency_sec": 0.0010390281677246094,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t003",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": true,
+      "priority_correct": true,
+      "team_correct": true,
+      "parsed_output": {
+        "category": "general_inquiry",
+        "priority": "P4_low",
+        "suggested_team": "support_general",
+        "reasoning": "Free-tier user asking about existing CSV export feature. Standard support inquiry, likely needs documentation pointer."
+      },
+      "raw_output": "{\"category\": \"general_inquiry\", \"priority\": \"P4_low\", \"suggested_team\": \"support_general\", \"reasoning\": \"Free-tier user asking about existing CSV export feature. Standard support inquiry, likely needs documentation pointer.\"}",
+      "error": null,
+      "latency_sec": 0.0007381439208984375,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t004",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": true,
+      "priority_correct": true,
+      "team_correct": true,
+      "parsed_output": {
+        "category": "billing",
+        "priority": "P3_medium",
+        "suggested_team": "billing_ops",
+        "reasoning": "Duplicate charge reported by pro-tier customer. Requires billing investigation and likely refund, but not service-impacting."
+      },
+      "raw_output": "{\"category\": \"billing\", \"priority\": \"P3_medium\", \"suggested_team\": \"billing_ops\", \"reasoning\": \"Duplicate charge reported by pro-tier customer. Requires billing investigation and likely refund, but not service-impacting.\"}",
+      "error": null,
+      "latency_sec": 0.00043392181396484375,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t005",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": true,
+      "priority_correct": true,
+      "team_correct": true,
+      "parsed_output": {
+        "category": "bug",
+        "priority": "P1_critical",
+        "suggested_team": "engineering",
+        "reasoning": "Complete data loss in production workspace affecting 200+ enterprise users is a critical incident requiring immediate engineering response."
+      },
+      "raw_output": "{\"category\": \"bug\", \"priority\": \"P1_critical\", \"suggested_team\": \"engineering\", \"reasoning\": \"Complete data loss in production workspace affecting 200+ enterprise users is a critical incident requiring immediate engineering response.\"}",
+      "error": null,
+      "latency_sec": 0.00046706199645996094,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t006",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": false,
+      "priority_correct": false,
+      "team_correct": false,
+      "parsed_output": {
+        "category": "account_access",
+        "priority": "P1_critical",
+        "suggested_team": "security",
+        "reasoning": "Enterprise customer with team-wide login failure after password reset indicates a critical authentication issue requiring immediate security team investigation."
+      },
+      "raw_output": "{\"category\": \"account_access\", \"priority\": \"P1_critical\", \"suggested_team\": \"security\", \"reasoning\": \"Enterprise customer with team-wide login failure after password reset indicates a critical authentication issue requiring immediate security team investigation.\"}",
+      "error": null,
+      "latency_sec": 0.0004260540008544922,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t007",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": true,
+      "priority_correct": false,
+      "team_correct": true,
+      "parsed_output": {
+        "category": "bug",
+        "priority": "P2_high",
+        "suggested_team": "engineering",
+        "reasoning": "Dashboard rendering failure blocking daily standups for a pro-tier customer. Functional degradation requiring prompt engineering attention."
+      },
+      "raw_output": "{\"category\": \"bug\", \"priority\": \"P2_high\", \"suggested_team\": \"engineering\", \"reasoning\": \"Dashboard rendering failure blocking daily standups for a pro-tier customer. Functional degradation requiring prompt engineering attention.\"}",
+      "error": null,
+      "latency_sec": 0.00039696693420410156,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t008",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": false,
+      "priority_correct": false,
+      "team_correct": false,
+      "parsed_output": {
+        "category": "feature_request",
+        "priority": "P4_low",
+        "suggested_team": "product",
+        "reasoning": "Customer requesting new export functionality. Route to product for backlog consideration."
+      },
+      "raw_output": "{\"category\": \"feature_request\", \"priority\": \"P4_low\", \"suggested_team\": \"product\", \"reasoning\": \"Customer requesting new export functionality. Route to product for backlog consideration.\"}",
+      "error": null,
+      "latency_sec": 0.0005562305450439453,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t009",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": false,
+      "priority_correct": false,
+      "team_correct": false,
+      "parsed_output": {
+        "category": "feature_request",
+        "priority": "P4_low",
+        "suggested_team": "product",
+        "reasoning": "Customer requesting new export functionality. Route to product for backlog consideration."
+      },
+      "raw_output": "{\"category\": \"feature_request\", \"priority\": \"P4_low\", \"suggested_team\": \"product\", \"reasoning\": \"Customer requesting new export functionality. Route to product for backlog consideration.\"}",
+      "error": null,
+      "latency_sec": 0.0007839202880859375,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t010",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": false,
+      "priority_correct": false,
+      "team_correct": false,
+      "parsed_output": {
+        "category": "account_access",
+        "priority": "P1_critical",
+        "suggested_team": "security",
+        "reasoning": "Enterprise customer with team-wide login failure after password reset indicates a critical authentication issue requiring immediate security team investigation."
+      },
+      "raw_output": "{\"category\": \"account_access\", \"priority\": \"P1_critical\", \"suggested_team\": \"security\", \"reasoning\": \"Enterprise customer with team-wide login failure after password reset indicates a critical authentication issue requiring immediate security team investigation.\"}",
+      "error": null,
+      "latency_sec": 0.0027697086334228516,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t011",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": false,
+      "priority_correct": false,
+      "team_correct": false,
+      "parsed_output": {
+        "category": "general_inquiry",
+        "priority": "P4_low",
+        "suggested_team": "support_general",
+        "reasoning": "Free-tier user asking about existing CSV export feature. Standard support inquiry, likely needs documentation pointer."
+      },
+      "raw_output": "{\"category\": \"general_inquiry\", \"priority\": \"P4_low\", \"suggested_team\": \"support_general\", \"reasoning\": \"Free-tier user asking about existing CSV export feature. Standard support inquiry, likely needs documentation pointer.\"}",
+      "error": null,
+      "latency_sec": 0.001500844955444336,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t012",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": true,
+      "priority_correct": false,
+      "team_correct": true,
+      "parsed_output": {
+        "category": "billing",
+        "priority": "P3_medium",
+        "suggested_team": "billing_ops",
+        "reasoning": "Duplicate charge reported by pro-tier customer. Requires billing investigation and likely refund, but not service-impacting."
+      },
+      "raw_output": "{\"category\": \"billing\", \"priority\": \"P3_medium\", \"suggested_team\": \"billing_ops\", \"reasoning\": \"Duplicate charge reported by pro-tier customer. Requires billing investigation and likely refund, but not service-impacting.\"}",
+      "error": null,
+      "latency_sec": 0.0006930828094482422,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t013",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": true,
+      "priority_correct": true,
+      "team_correct": true,
+      "parsed_output": {
+        "category": "account_access",
+        "priority": "P1_critical",
+        "suggested_team": "security",
+        "reasoning": "Enterprise customer with team-wide login failure after password reset indicates a critical authentication issue requiring immediate security team investigation."
+      },
+      "raw_output": "{\"category\": \"account_access\", \"priority\": \"P1_critical\", \"suggested_team\": \"security\", \"reasoning\": \"Enterprise customer with team-wide login failure after password reset indicates a critical authentication issue requiring immediate security team investigation.\"}",
+      "error": null,
+      "latency_sec": 0.0009639263153076172,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t014",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": false,
+      "priority_correct": false,
+      "team_correct": false,
+      "parsed_output": {
+        "category": "account_access",
+        "priority": "P1_critical",
+        "suggested_team": "security",
+        "reasoning": "Enterprise customer with team-wide login failure after password reset indicates a critical authentication issue requiring immediate security team investigation."
+      },
+      "raw_output": "{\"category\": \"account_access\", \"priority\": \"P1_critical\", \"suggested_team\": \"security\", \"reasoning\": \"Enterprise customer with team-wide login failure after password reset indicates a critical authentication issue requiring immediate security team investigation.\"}",
+      "error": null,
+      "latency_sec": 0.0009980201721191406,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t015",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": true,
+      "priority_correct": true,
+      "team_correct": true,
+      "parsed_output": {
+        "category": "general_inquiry",
+        "priority": "P4_low",
+        "suggested_team": "support_general",
+        "reasoning": "Free-tier user asking about existing CSV export feature. Standard support inquiry, likely needs documentation pointer."
+      },
+      "raw_output": "{\"category\": \"general_inquiry\", \"priority\": \"P4_low\", \"suggested_team\": \"support_general\", \"reasoning\": \"Free-tier user asking about existing CSV export feature. Standard support inquiry, likely needs documentation pointer.\"}",
+      "error": null,
+      "latency_sec": 0.0007119178771972656,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t016",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": true,
+      "priority_correct": false,
+      "team_correct": true,
+      "parsed_output": {
+        "category": "bug",
+        "priority": "P2_high",
+        "suggested_team": "engineering",
+        "reasoning": "Dashboard rendering failure blocking daily standups for a pro-tier customer. Functional degradation requiring prompt engineering attention."
+      },
+      "raw_output": "{\"category\": \"bug\", \"priority\": \"P2_high\", \"suggested_team\": \"engineering\", \"reasoning\": \"Dashboard rendering failure blocking daily standups for a pro-tier customer. Functional degradation requiring prompt engineering attention.\"}",
+      "error": null,
+      "latency_sec": 0.0007798671722412109,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t017",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": false,
+      "priority_correct": false,
+      "team_correct": false,
+      "parsed_output": {
+        "category": "account_access",
+        "priority": "P1_critical",
+        "suggested_team": "security",
+        "reasoning": "Enterprise customer with team-wide login failure after password reset indicates a critical authentication issue requiring immediate security team investigation."
+      },
+      "raw_output": "{\"category\": \"account_access\", \"priority\": \"P1_critical\", \"suggested_team\": \"security\", \"reasoning\": \"Enterprise customer with team-wide login failure after password reset indicates a critical authentication issue requiring immediate security team investigation.\"}",
+      "error": null,
+      "latency_sec": 0.00042891502380371094,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t018",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": true,
+      "priority_correct": false,
+      "team_correct": true,
+      "parsed_output": {
+        "category": "feature_request",
+        "priority": "P4_low",
+        "suggested_team": "product",
+        "reasoning": "Customer requesting new export functionality. Route to product for backlog consideration."
+      },
+      "raw_output": "{\"category\": \"feature_request\", \"priority\": \"P4_low\", \"suggested_team\": \"product\", \"reasoning\": \"Customer requesting new export functionality. Route to product for backlog consideration.\"}",
+      "error": null,
+      "latency_sec": 0.0003998279571533203,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t019",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": true,
+      "priority_correct": true,
+      "team_correct": true,
+      "parsed_output": {
+        "category": "billing",
+        "priority": "P3_medium",
+        "suggested_team": "billing_ops",
+        "reasoning": "Duplicate charge reported by pro-tier customer. Requires billing investigation and likely refund, but not service-impacting."
+      },
+      "raw_output": "{\"category\": \"billing\", \"priority\": \"P3_medium\", \"suggested_team\": \"billing_ops\", \"reasoning\": \"Duplicate charge reported by pro-tier customer. Requires billing investigation and likely refund, but not service-impacting.\"}",
+      "error": null,
+      "latency_sec": 0.0003662109375,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    },
+    {
+      "case_id": "t020",
+      "json_valid": true,
+      "schema_valid": true,
+      "category_correct": true,
+      "priority_correct": true,
+      "team_correct": true,
+      "parsed_output": {
+        "category": "bug",
+        "priority": "P1_critical",
+        "suggested_team": "engineering",
+        "reasoning": "Complete data loss in production workspace affecting 200+ enterprise users is a critical incident requiring immediate engineering response."
+      },
+      "raw_output": "{\"category\": \"bug\", \"priority\": \"P1_critical\", \"suggested_team\": \"engineering\", \"reasoning\": \"Complete data loss in production workspace affecting 200+ enterprise users is a critical incident requiring immediate engineering response.\"}",
+      "error": null,
+      "latency_sec": 0.002223968505859375,
+      "judge_scores": {
+        "specificity": 4,
+        "correctness": 4,
+        "completeness": 4
+      }
+    }
+  ],
+  "perspective_demo": {
+    "case_id": "t001",
+    "perspectives": [
+      {
+        "perspective_id": "customer_success",
+        "analysis": {
+          "sentiment": "frustrated",
+          "churn_risk": "high",
+          "needs_outreach": true,
+          "cs_notes": "Enterprise customer experiencing critical issue. High churn risk due to team-wide impact. Proactive exec outreach recommended."
+        }
+      },
+      {
+        "perspective_id": "engineering_lead",
+        "analysis": {
+          "likely_cause": "Authentication service regression after password-reset flow update",
+          "blast_radius": "subset",
+          "possible_regression": true,
+          "fix_complexity": "moderate",
+          "eng_notes": "Likely auth-service issue. Check recent deploys to password-reset or session-management services."
+        }
+      },
+      {
+        "perspective_id": "security_analyst",
+        "analysis": {
+          "security_relevant": true,
+          "data_exposure_risk": "low",
+          "account_compromise_risk": "medium",
+          "security_notes": "Team-wide lockout could indicate credential-stuffing or auth misconfiguration. Verify no unauthorized access during lockout window."
+        }
+      }
+    ],
+    "synthesis": {
+      "common_findings": [
+        "Critical issue affecting enterprise customer",
+        "Authentication/access failure with team-wide blast radius",
+        "High urgency requiring immediate response"
+      ],
+      "disagreements": [
+        "Security sees possible compromise risk; engineering sees likely regression"
+      ],
+      "unified_priority": "P1_critical",
+      "action_plan": [
+        "Immediately engage security team to rule out compromise",
+        "Engineering to check recent auth-service deploys for regressions",
+        "Customer Success to send proactive update to customer exec sponsor",
+        "Set up bridge call if not resolved within 30 minutes"
+      ],
+      "escalation_needed": true
+    }
+  }
+}

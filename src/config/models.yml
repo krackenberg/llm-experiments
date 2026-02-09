@@ -1,5 +1,11 @@
-default_model: claude-3.7-sonic
+default_model: sonnet
 models:
+  sonnet:
+    provider: anthropic
+    model_id: claude-sonnet-4-20250514
+  haiku:
+    provider: anthropic
+    model_id: claude-3-5-haiku-20241022
   claude-3.7-sonic:
     provider: bedrock
     model_id: anthropic.claude-3-7-sonic-2025-01-01
